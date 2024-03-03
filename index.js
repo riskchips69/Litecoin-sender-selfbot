@@ -58,7 +58,7 @@ async function sendLTC(address, amount) {
     {
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': 't-65d1ebe00b235c001c6aaf71-8721e8f471dd4bcbab9d2f5b'
+        'x-api-key': 'your_tautam_api_key'
       }
     }
   );
