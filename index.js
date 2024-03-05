@@ -1,9 +1,9 @@
 const { Client } = require('discord.js-selfbot-v13')
 const Client = new Client({ checkUpdate: false });
 const axios = require('axios');
-
-const ownerId = "your_user_id";
-const prefix = '.';
+const config = require('./config.json');
+const ownerId = config.userid;
+const prefix = config.prefix;
 
 client.on('message', async (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -42,8 +42,8 @@ async function sendLTC(address, amount) {
     {
       fromAddress: [
         {
-          address: 'ltc_address_you_are_sending_from',
-          privateKey: 'same_private_key'
+          address: config.ltc_address,
+          privateKey: config.ltckey'
         }
       ],
       to: [
@@ -53,12 +53,12 @@ async function sendLTC(address, amount) {
         }
       ],
       fee: '0.00005', 
-      changeAddress: 'ltc_address_you_are_sending_from'
+      changeAddress: config.ltc_address
     },
     {
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': 'your_tautam_api_key'
+        'x-api-key': config.apikey
       }
     }
   );
@@ -68,5 +68,5 @@ async function sendLTC(address, amount) {
 }
 
 
-client.login('your_token')
+client.login(config.token)
   
