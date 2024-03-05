@@ -4,5 +4,5 @@
   "ltckey": "your_ltc_private_key",
   "ltc_address": "your_private_key_address",
   "userid": "your_discord_user_id",
-  "prefix": "." //change according to your need
+  "prefix": "."  
 }
