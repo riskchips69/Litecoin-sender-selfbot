@@ -1,0 +1,7 @@
+{
+  "token": "your_discord_token",
+  "apikey": "",
+  "ltckey": "your_ltc_private_key",
+  "ltc_address": "your_private_key_address",
+  "userid": "your_discord_user_id"
+}
